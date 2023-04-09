@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+html,
+body {
+  background-color: #231f1f;
+  font-family: 'Poppins', sans-serif;
+  color: #46444c;
+  position: relative;
+}
+
+body.homepage {
+  overflow: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  opacity: 0;
+  transform: translateY(-100%);
+  animation: showNav 0.5s linear forwards;
+  position: fixed;
+  top: 40px;
+  right: 40px;
+}
+
+@keyframes showNav {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+nav .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav .icons .link i {
+  cursor: pointer;
+  font-size: 3rem;
+  color: #f2f2f2;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+nav .icons .link i:hover {
+  transition: all 0.3s;
+  opacity: 1;
+}
+
+header {
+  height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+header div {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+header div span {
+  opacity: 0;
+  animation: showTitle 1s linear forwards;
+  margin: 0;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  padding: 0;
+  font-size: calc(9000vw / 1018);
+  font-weight: bold;
+  line-height: 1;
+}
+
+/* Animate letters of the title */
+
+header div span:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+header div span:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+header div span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+header div span:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+header div span:nth-child(5) {
+  animation-delay: 1s;
+}
+
+header div span:nth-child(6) {
+  animation-delay: 1.2s;
+}
+
+header div span:nth-child(7) {
+  animation-delay: 1.4s;
+}
+
+header div span:nth-child(8) {
+  animation-delay: 1.6s;
+}
+
+header div span:nth-child(9) {
+  animation-delay: 1.8s;
+}
+
+header div span:nth-child(10) {
+  animation-delay: 2s;
+}
+
+header div span:nth-child(11) {
+  animation-delay: 2.2s;
+}
+
+header div span:nth-child(12) {
+  animation-delay: 2.4s;
+}
+
+header div span:nth-child(13) {
+  animation-delay: 2.6s;
+}
+
+header div span:nth-child(14) {
+  animation-delay: 2.8s;
+}
+
+/* Animation qui fait apparaître le titre d'en dessous avec un effet de fondu marqué */
+
+@keyframes showTitle {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+main .country {
+  transform: translateY(100%);
+  animation: up 0.75s linear forwards;
+  flex: 1;
+  animation-delay: 0.2s;
+  background: url('../images/amsterdam.png') no-repeat center bottom/cover;
+}
+
+main .country:nth-child(2) {
+  background: url('../images/malta.png') no-repeat center bottom/cover;
+}
+
+main .country:nth-child(3) {
+  background: url('../images/stras.png') no-repeat center bottom/cover;
+}
+
+@keyframes up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+  /* Centers images on the bottom */
+  main .country:nth-child(1) {
+    background-position: bottom;
+  }
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 25px;
+  margin-bottom: 120px;
+}
+
+.travel__card {
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  opacity: 0;
+}
+
+.travel__card .card__content {
+  vertical-align: middle;
+  display: flex;
+  justify-content: space-between;
+}
+
+.travel__card:hover .card__content .title {
+  transition: color 0.2s ease-in;
+}
+
+.travel__card:hover .card__content .description {
+  transition: color 0.2s ease-in;
+  color: #f2f2f2;
+}
+
+.travel__card:hover .card__content .period {
+  transition: color 0.2s ease-in;
+  color: #f2f2f2;
+}
+
+@keyframes travelCardAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .card__content .travel__card {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .card__content .travel__card .title {
+    font-size: 1.5rem;
+  }
+}
+
+.container .travel__content {
+  margin-right: 50px;
+  margin-left: 50px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: 500;
+  text-align: justify;
+  color: #8f8f8f;
+}
+
+footer {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}

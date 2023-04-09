@@ -1,0 +1,11 @@
+<a href={{ route('travel.show', { slug: travel.slug }) }} class="travel__card">
+	<div class="card__content" data-key={{ key }} data-travel={{ id }}>
+		<div>
+			<h1 class="title">{{ travel.title }}</h1>
+			<p class="description">{{ travel.description }}</p>
+		</div>
+		<div>
+			<span class="period">{{ travel.period }}</span>	
+		</div>
+	</div>
+</a>

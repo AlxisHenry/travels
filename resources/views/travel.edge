@@ -1,0 +1,15 @@
+@layout('layouts.app')
+
+@section('title')
+    @each(key in travel.title)
+        <span>{{ key }}</span>
+    @endeach
+@endsection
+
+@section('content')
+    <div class="container">
+        <div class="travel__content">
+            {{ safe(travel . content) }}
+        </div>
+    </div>
+@endsection

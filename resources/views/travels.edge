@@ -1,0 +1,29 @@
+@layout('layouts.app')
+
+@section('title')
+    <div>
+        <span>T</span>
+        <span>R</span>
+        <span>A</span>
+        <span>V</span>
+        <span>E</span>
+        <span>L</span>
+        <span>S</span>
+    </div>
+@endsection
+
+@section('content')
+    <div class="container">
+        @if (travels && travels . length > 0)
+            @each((travel, index) in travels)
+                @!component('components.card', {
+                    travel: travel,
+                    id: travel.id,
+                    key: index,
+                })
+            @end
+        @else
+            <p>No travels found.</p>
+        @endif
+    </div>
+@endsection
