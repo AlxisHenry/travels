@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <img src="public/assets/icons/apple-touch-icon-180x180.png" alt="logo" width="220" height="auto" />
+  <img src="https://cdn.alexishenry.eu/shared/images/logo.png" alt="logo" width="220" height="auto" />
   <h1>Travels</h1>
   
   <p>
