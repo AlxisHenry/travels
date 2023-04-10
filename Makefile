@@ -8,3 +8,4 @@ deploy:
 .PHONY: install
 install:
 	npm run build
+	cp .env ./build/.env
